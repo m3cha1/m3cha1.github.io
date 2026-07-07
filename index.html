@@ -1,184 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mecha's website</title>
-    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/m3cha1/m3cha1.github.io/main/website%20icon.png">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Arial', sans-serif;
-            background: #1a0f2e;
-            color: #fff;
-            overflow-x: hidden;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .stars-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            background: radial-gradient(circle at center, #2a1a4a 0%, #1a0f2e 100%);
-            overflow: hidden;
-            pointer-events: none;
-        }
-
-        .star {
-            position: absolute;
-            width: 2px;
-            height: 2px;
-            background: white;
-            border-radius: 50%;
-            animation: twinkle 3s infinite;
-            will-change: opacity;
-        }
-
-        @keyframes twinkle {
-            0%, 100% {
-                opacity: 0.3;
-            }
-            50% {
-                opacity: 1;
-            }
-        }
-
-        .star:nth-child(1) { left: 10%; top: 15%; animation-delay: 0s; width: 1.5px; height: 1.5px; }
-        .star:nth-child(2) { left: 20%; top: 40%; animation-delay: 0.5s; }
-        .star:nth-child(3) { left: 30%; top: 10%; animation-delay: 1s; width: 1px; height: 1px; }
-        .star:nth-child(4) { left: 40%; top: 60%; animation-delay: 1.5s; }
-        .star:nth-child(5) { left: 50%; top: 25%; animation-delay: 0.2s; width: 1.5px; height: 1.5px; }
-        .star:nth-child(6) { left: 60%; top: 50%; animation-delay: 1.8s; }
-        .star:nth-child(7) { left: 70%; top: 35%; animation-delay: 0.7s; width: 1px; height: 1px; }
-        .star:nth-child(8) { left: 80%; top: 65%; animation-delay: 1.2s; }
-        .star:nth-child(9) { left: 90%; top: 20%; animation-delay: 0.3s; width: 1.5px; height: 1.5px; }
-        .star:nth-child(10) { left: 15%; top: 75%; animation-delay: 2s; }
-        .star:nth-child(11) { left: 45%; top: 80%; animation-delay: 0.9s; width: 1px; height: 1px; }
-        .star:nth-child(12) { left: 75%; top: 15%; animation-delay: 1.5s; }
-        .star:nth-child(13) { left: 25%; top: 55%; animation-delay: 0.4s; }
-        .star:nth-child(14) { left: 65%; top: 75%; animation-delay: 1.1s; width: 1.5px; height: 1.5px; }
-        .star:nth-child(15) { left: 35%; top: 30%; animation-delay: 1.7s; }
-        .star:nth-child(16) { left: 85%; top: 45%; animation-delay: 0.6s; width: 1px; height: 1px; }
-        .star:nth-child(17) { left: 12%; top: 45%; animation-delay: 1.3s; }
-        .star:nth-child(18) { left: 55%; top: 70%; animation-delay: 0.8s; }
-        .star:nth-child(19) { left: 72%; top: 60%; animation-delay: 0.1s; width: 1.5px; height: 1.5px; }
-        .star:nth-child(20) { left: 42%; top: 15%; animation-delay: 1.9s; }
-
-        .container {
-            text-align: center;
-            z-index: 10;
-            position: relative;
-        }
-
-        h1 {
-            font-size: 3em;
-            margin: 0;
-            font-weight: 800;
-            letter-spacing: -1px;
-            background: linear-gradient(135deg, #c084fc, #a855f7);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: glow 2s ease-in-out infinite;
-        }
-
-        @keyframes glow {
-            0%, 100% {
-                text-shadow: 0 0 20px rgba(168, 85, 247, 0.5);
-                filter: drop-shadow(0 0 10px rgba(168, 85, 247, 0.6));
-            }
-            50% {
-                text-shadow: 0 0 30px rgba(168, 85, 247, 0.8);
-                filter: drop-shadow(0 0 20px rgba(168, 85, 247, 0.9));
-            }
-        }
-
-        .subtitle {
-            font-size: 1.2em;
-            margin-top: 10px;
-            color: #fff;
-            text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-        }
-
-        .subtitle a {
-            color: #ffd700;
-            text-decoration: none;
-            font-size: 1em;
-            transition: color 0.3s ease, text-shadow 0.3s ease;
-        }
-
-        .subtitle a:hover {
-            color: #ffed4e;
-            text-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
-        }
-
-        .links {
-            margin-top: 30px;
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        a {
-            color: #4a90e2;
-            text-decoration: none;
-            font-size: 1.2em;
-            font-weight: bold;
-            transition: color 0.3s ease, text-shadow 0.3s ease;
-            text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-        }
-
-        a:hover {
-            color: #357abd;
-            text-shadow: 0 0 15px rgba(74, 144, 226, 0.8);
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>mecha's website</title>
+<link rel="icon" type="image/png" href="https://raw.githubusercontent.com/m3cha1/m3cha1.github.io/main/website%20icon.png">
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Arial', sans-serif;
+  background: #1a0f2e;
+  color: #fff;
+  overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#stars-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: radial-gradient(circle at center, #2a1a4a 0%, #1a0f2e 100%);
+}
+.container {
+  text-align: center;
+  z-index: 10;
+  position: relative;
+}
+h1 {
+  font-size: 3em;
+  margin: 0;
+  font-weight: 800;
+  letter-spacing: -1px;
+  background: linear-gradient(135deg, #c084fc, #a855f7);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glow 2s ease-in-out infinite;
+}
+@keyframes glow {
+  0%, 100% {
+    text-shadow: 0 0 20px rgba(168, 85, 247, 0.5);
+    filter: drop-shadow(0 0 10px rgba(168, 85, 247, 0.6));
+  }
+  50% {
+    text-shadow: 0 0 30px rgba(168, 85, 247, 0.8);
+    filter: drop-shadow(0 0 20px rgba(168, 85, 247, 0.9));
+  }
+}
+.subtitle {
+  font-size: 1.2em;
+  margin-top: 10px;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.subtitle a {
+  color: #ffd700;
+  text-decoration: none;
+  font-size: 1em;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+.subtitle a:hover {
+  color: #ffed4e;
+  text-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
+}
+.links {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+a {
+  color: #4a90e2;
+  text-decoration: none;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+a:hover {
+  color: #357abd;
+  text-shadow: 0 0 15px rgba(74, 144, 226, 0.8);
+}
+</style>
 </head>
 <body>
-    <div class="stars-container">
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-    </div>
 
-    <div class="container">
-        <h1>Welcome to my website</h1>
-        <p class="subtitle">hi i code random stuff in <a href="https://python.org" target="_blank">python</a></p>
-        <div class="links">
-            <a href="https://discord.gg/T6uCawEVwg" target="_blank">Discord</a>
-            <a href="https://github.com/m3cha1" target="_blank">Github</a>
-            <a href="https://youtube.com/@m3cha1" target="_blank">YouTube</a>
-            <a href="https://www.roblox.com/users/7843710526/profile" target="_blank">Roblox</a>
-        </div>
-    </div>
+<canvas id="stars-canvas"></canvas>
+
+<div class="container">
+  <h1>Welcome to my website</h1>
+  <p class="subtitle">hi i code random stuff in <a href="https://python.org" target="_blank">python</a></p>
+  <div class="links">
+    <a href="https://discord.gg/T6uCawEVwg" target="_blank">Discord</a>
+    <a href="https://github.com/m3cha1" target="_blank">Github</a>
+    <a href="https://youtube.com/@m3cha1" target="_blank">YouTube</a>
+    <a href="https://www.roblox.com/users/7843710526/profile" target="_blank">Roblox</a>
+  </div>
+</div>
+
+<script src="main.js"></script>
+
 </body>
 </html>
