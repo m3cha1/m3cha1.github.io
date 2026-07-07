@@ -12,6 +12,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: 'Arial', sans-serif;
   background: #1a0f2e;
@@ -22,6 +23,7 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 #stars-canvas {
   position: fixed;
   top: 0;
@@ -31,11 +33,13 @@ body {
   z-index: -1;
   background: radial-gradient(circle at center, #2a1a4a 0%, #1a0f2e 100%);
 }
+
 .container {
   text-align: center;
   z-index: 10;
   position: relative;
 }
+
 h1 {
   font-size: 3em;
   margin: 0;
@@ -47,50 +51,36 @@ h1 {
   -webkit-text-fill-color: transparent;
   animation: glow 2s ease-in-out infinite;
 }
+
 @keyframes glow {
   0%, 100% {
     text-shadow: 0 0 20px rgba(168, 85, 247, 0.5);
     filter: drop-shadow(0 0 10px rgba(168, 85, 247, 0.6));
   }
+
   50% {
     text-shadow: 0 0 30px rgba(168, 85, 247, 0.8);
     filter: drop-shadow(0 0 20px rgba(168, 85, 247, 0.9));
   }
 }
+
 .subtitle {
   font-size: 1.2em;
   margin-top: 10px;
   color: #fff;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
+
 .subtitle a {
   color: #ffd700;
   text-decoration: none;
   font-size: 1em;
   transition: color 0.3s ease, text-shadow 0.3s ease;
 }
+
 .subtitle a:hover {
   color: #ffed4e;
   text-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
-}
-.links {
-  margin-top: 30px;
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-a {
-  color: #4a90e2;
-  text-decoration: none;
-  font-size: 1.2em;
-  font-weight: bold;
-  transition: color 0.3s ease, text-shadow 0.3s ease;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-}
-a:hover {
-  color: #357abd;
-  text-shadow: 0 0 15px rgba(74, 144, 226, 0.8);
 }
 </style>
 </head>
@@ -101,6 +91,7 @@ a:hover {
 <div class="container">
   <h1>Welcome to my website</h1>
   <p class="subtitle">hi i code random stuff in <a href="https://python.org" target="_blank">python</a></p>
+
   <div class="links">
     <a href="https://discord.gg/T6uCawEVwg" target="_blank">Discord</a>
     <a href="https://github.com/m3cha1" target="_blank">Github</a>
