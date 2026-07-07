@@ -1,3 +1,11 @@
+.links {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 .links a {
   width: 130px;
   height: 55px;
@@ -6,9 +14,7 @@
   justify-content: center;
   align-items: center;
 
-  color: white !important;
   text-decoration: none;
-
   font-size: 1.2em;
   font-weight: bold;
 
@@ -24,45 +30,66 @@
     inset 0 0 15px rgba(255, 255, 255, 0.05),
     0 8px 25px rgba(0, 0, 0, 0.35);
 
-  text-shadow:
-    0 0 10px rgba(255, 255, 255, 0.3);
-
   transition:
     transform 0.3s ease,
     background 0.3s ease,
-    box-shadow 0.3s ease;
+    box-shadow 0.3s ease,
+    color 0.3s ease,
+    text-shadow 0.3s ease;
+}
+
+.links a:nth-child(1) {
+  color: #5865f2;
+  text-shadow: 0 0 10px rgba(88, 101, 242, 0.55);
+}
+
+.links a:nth-child(2) {
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.55);
+}
+
+.links a:nth-child(3) {
+  color: #ff0000;
+  text-shadow: 0 0 10px rgba(255, 0, 0, 0.55);
+}
+
+.links a:nth-child(4) {
+  color: #00a2ff;
+  text-shadow: 0 0 10px rgba(0, 162, 255, 0.55);
 }
 
 .links a:hover {
   transform: translateY(-8px) scale(1.08);
-
   background: rgba(255, 255, 255, 0.16);
-
-  color: white !important;
-
-  text-shadow:
-    0 0 15px rgba(255, 255, 255, 0.8);
 }
 
 .links a:nth-child(1):hover {
+  color: #5865f2;
+  text-shadow: 0 0 15px rgba(88, 101, 242, 0.9);
   box-shadow:
-    0 0 30px #5865F2,
+    0 0 30px #5865f2,
     inset 0 0 20px rgba(255, 255, 255, 0.15);
 }
 
 .links a:nth-child(2):hover {
+  color: #ffffff;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.9);
   box-shadow:
-    0 0 30px white,
+    0 0 30px #ffffff,
     inset 0 0 20px rgba(255, 255, 255, 0.15);
 }
 
 .links a:nth-child(3):hover {
+  color: #ff0000;
+  text-shadow: 0 0 15px rgba(255, 0, 0, 0.9);
   box-shadow:
     0 0 30px #ff0000,
     inset 0 0 20px rgba(255, 255, 255, 0.15);
 }
 
 .links a:nth-child(4):hover {
+  color: #00a2ff;
+  text-shadow: 0 0 15px rgba(0, 162, 255, 0.9);
   box-shadow:
     0 0 30px #00a2ff,
     inset 0 0 20px rgba(255, 255, 255, 0.15);
