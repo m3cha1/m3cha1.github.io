@@ -85,14 +85,22 @@
             margin: 0;
             font-weight: 800;
             letter-spacing: -1px;
-            color: #a855f7;
-            transition: color 0.3s ease, text-shadow 0.3s ease;
-            cursor: pointer;
+            background: linear-gradient(135deg, #c084fc, #a855f7);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: glow 2s ease-in-out infinite;
         }
 
-        h1:hover {
-            color: #c084fc;
-            text-shadow: 0 0 20px rgba(168, 85, 247, 0.8);
+        @keyframes glow {
+            0%, 100% {
+                text-shadow: 0 0 20px rgba(168, 85, 247, 0.5);
+                filter: drop-shadow(0 0 10px rgba(168, 85, 247, 0.6));
+            }
+            50% {
+                text-shadow: 0 0 30px rgba(168, 85, 247, 0.8);
+                filter: drop-shadow(0 0 20px rgba(168, 85, 247, 0.9));
+            }
         }
 
         .subtitle {
